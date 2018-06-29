@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+		{% for restaurante in restaurantes %}
+		 <div>
+		  <img src="/static/blog/images/{{ restaurante.img }}" class="img-responsive" alt="{{ restaurante.name }}">
+		    <p>{{ restaurante.name }}</p>	  
+		    <p style="color:white">{{ restaurante.description|linebreaksbr }}</p>
+		  </div>
+		{% endfor %}
+
+
+{% endblock %}

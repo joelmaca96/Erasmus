@@ -1,0 +1,22 @@
+{% extends 'base_accounts.html' %}
+
+{% block content %}
+
+<div class="bg-7">
+  <form method="post" novalidate>
+	{% csrf_token %}
+    {% include 'includes/form.html' %}
+  </form>
+</div>
+<div class="card-footer text-muted text-center">Nuevo en Erasmus World? 
+  <a href="{% url 'signup' %}">Date de alta</a>
+</div>
+
+<div class="text-center py-2">
+ <small>
+   <a href="#" class="text-muted">Has olvidado la contraseña?</a>
+ </small>
+</div>
+
+{% endblock %}
+

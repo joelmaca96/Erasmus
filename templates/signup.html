@@ -1,0 +1,16 @@
+{% extends 'base_accounts.html' %}
+
+{% block content %}
+
+<div class="bg-7">
+  <form method="post" novalidate>
+	{% csrf_token %}
+	{% include 'includes/form.html' %}
+  </form>
+</div>
+
+<div class="card-footer text-muted text-center">Ya tienes cuenta? 
+  <a href="{% url 'login' %}">Log in</a>
+</div>
+ 
+{% endblock %}
