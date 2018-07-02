@@ -39,9 +39,10 @@ def new_restaurante(request):
 
         if form.is_valid():
             restaurante = form.save(commit=False)
-            message=form.cleaned_data.get('message')
+            message=form.cleaned_data.get('message') 
+            restaurante.created_by = request.user
             restaurante.save()
-            return redirect('index')  # TODO: redirect to the created topic page
+            return redirect('lugares')  # TODO: redirect to the created topic page
     else:
         form = NewRestaurantForm()
 
