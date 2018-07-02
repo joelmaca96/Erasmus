@@ -27,7 +27,9 @@
           <li><a href="#">Recomendados</a></li>
         </ul>
       </li>
+	  {% if request.user.is_superuser %}
       <li><a href="{% url 'newrestaurante'%}">Nuevo Sitio</a></li>
+	  {% endif %}
       <li><a href="#">Noticias</a></li>
 	<form class="navbar-form navbar-left" action="#">
     <div class="input-group">
@@ -41,7 +43,10 @@
     </form>
 	 </ul>
 	<ul class="nav navbar-nav navbar-right">
-		<li><a href="/admin">Admin</a></li>
+	    {% if request.user.is_superuser %}
+     	    <li><a href="/admin">Admin</a></li>
+		{% endif %}
+		<li><a href="/admin">{{ Super }}</a></li>
 		<li class="nav-item dropdown">
 		  <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			{{ user.username }}

@@ -11,8 +11,8 @@ def index(request):
 
 @login_required
 def lugarlist(request):
-	lugares = Lugar.objects.order_by('-created_date')[:4]
-	return render(request, 'lugares_list.html', {'lugares': lugares})	
+    lugares = Lugar.objects.order_by('-created_date')[:4]
+    return render(request, 'lugares_list.html', {'lugares': lugares})	
 
 @login_required
 def Restaurantelist(request, pk):
