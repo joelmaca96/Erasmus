@@ -13,7 +13,7 @@ urlpatterns = [
 	url(r'^temas/$', views.lugarlist, name='lugares'),
     url(r'^temas/(?P<pk>\d+)/$', views.lugar_topics, name='temas_lugar'),
     url(r'^temas/(?P<pk>\d+)/Restaurantes/$', views.Restaurantelist, name='restaurantes'),
-    url(r'^temas/(?P<pk>\d+)/Restaurantes/new/$', views.new_restaurante, name='new_restaurante'),
+    url(r'^temas/(?P<pk>\d+)/Restaurantes/new/$', views.new_restaurante, name='newrestaurante'),
 	url(r'^admin/', admin.site.urls),	
 	url(r'^reset/$',auth_views.PasswordResetView.as_view(template_name='password_reset.html',email_template_name='password_reset_email.html',subject_template_name='password_reset_subject.txt'),name='password_reset'),
 	url(r'^reset/done/$',auth_views.PasswordResetDoneView.as_view(template_name='password_reset_done.html'),name='password_reset_done'),
