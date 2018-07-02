@@ -19,7 +19,7 @@
       <p class="navbar-brand">Erasmus World</p>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="http://127.0.0.1:8000/temas/">Home</a></li>
+      <li><a href="{% url 'lugares' %}">Home</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle active" data-toggle="dropdown" href="#">Sitios<span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -27,7 +27,7 @@
           <li><a href="#">Recomendados</a></li>
         </ul>
       </li>
-      <li><a href="/temas/1/Restaurantes/new/">Nuevo Sitio</a></li>
+      <li><a href="{% url 'new_restaurante' %}">Nuevo Sitio</a></li>
       <li><a href="#">Noticias</a></li>
 	<form class="navbar-form navbar-left" action="#">
     <div class="input-group">

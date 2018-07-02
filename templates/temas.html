@@ -141,7 +141,7 @@
       <div class="cta-content">
         <div class="container">
           <h2>No esperes más.<br>Empieza a explorar.</h2>
-          <a href="http://127.0.0.1:8000/temas/{{ lugar.pk }}/Restaurantes" class="btn btn-outline btn-xl js-scroll-trigger">Vamos alla!</a>
+          <a href="{% url 'restaurantes'  lugar.pk  %}" class="btn btn-outline btn-xl js-scroll-trigger">Vamos alla!</a>
         </div>
       </div>
       <div class="overlay"></div>
