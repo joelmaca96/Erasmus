@@ -27,7 +27,7 @@
 		<div class="item">
 		  <img src="/static/blog/images/{{ lugar.img }}" class="img-responsive" alt="{{ lugar.name }}">
 		  <div class="carousel-caption">
-		  <a class="Title" href="http://127.0.0.1:8000/temas/{{ lugar.pk }}">{{ lugar.name }}</a>	  
+		  <a class="Title" href="{% url 'temas_lugar'  lugar.pk  %}">{{ lugar.name }}</a>	  
 		  <p class="Resumen">{{ lugar.description|linebreaksbr }}</p>
 		  </div>
 		</div>
