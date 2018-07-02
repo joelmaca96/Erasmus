@@ -32,7 +32,7 @@ def lugar_topics(request, pk):
     lugar= get_object_or_404(Lugar, pk=pk)
     return render(request, 'temas.html', {'lugar': lugar})
 	
-   
+@login_required	   
 def new_restaurante(request, pk):
     lugar = get_object_or_404(Lugar, pk=pk)
     if request.method == 'POST':
