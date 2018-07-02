@@ -33,18 +33,16 @@ def lugar_topics(request, pk):
     return render(request, 'temas.html', {'lugar': lugar})
 	
 @login_required	   
-def new_restaurante(request, pk):
-    lugar = get_object_or_404(Lugar, pk=pk)
+def new_restaurante(request):
     if request.method == 'POST':
         form = NewRestaurantForm(request.POST)
 
         if form.is_valid():
             restaurante = form.save(commit=False)
-            
             message=form.cleaned_data.get('message')
             restaurante.save()
-            return redirect('lugares', pk=lugar.pk)  # TODO: redirect to the created topic page
+            return redirect('index')  # TODO: redirect to the created topic page
     else:
         form = NewRestaurantForm()
-        form.ciudad = lugar.name
-    return render(request, 'new_Restaurante.html', {'lugar': lugar, 'form': form})
+
+    return render(request, 'new_Restaurante.html', {'form': form})
