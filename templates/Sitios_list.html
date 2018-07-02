@@ -4,7 +4,7 @@
 
 		{% for restaurante in restaurantes %}
 		 <div>
-		  <img src="/static/blog/images/{{ restaurante.img }}" class="img-responsive" alt="{{ restaurante.name }}">
+		  <img src="/static/blog/images/{{ restaurante.img }}" class="img-responsive" alt="{{ restaurante.img }}">
 		    <p>{{ restaurante.name }}</p>	  
 		    <p style="color:white">{{ restaurante.description|linebreaksbr }}</p>
 		  </div>
